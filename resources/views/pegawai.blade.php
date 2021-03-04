@@ -6,12 +6,19 @@
 <body>
  
 <h1>Data Pegawai</h1>
- 
-<ul>
+<table border='1'>
+ <tr>
+    <td>ID</td>
+    <td>NAMA</td>
+    <td>ALAMAT</td>
+ </tr>
  @foreach($pegawai as $p)
- <li>{{ "Nama : ". $p->nama . ' | Alamat : ' . $p->alamat }}</li>
- @endforeach
-</ul>
- 
+ <tr>
+ <td>{{$p['id']}}</td>
+ <td>{{$p['nama']}}</td>
+ <td>{{$p['alamat']}}</td>
+ </tr>
+ @endforeach 
+</table>
 </body>
 </html>
